@@ -15,10 +15,6 @@ export class TaskService {
         ...(status && { status: status as any })
       }
     });
-
-    if (tasks.length === 0) {
-      throw new NotFoundException("Nenhuma tarefa encontrada.");
-    };
     
     return tasks;
   };
